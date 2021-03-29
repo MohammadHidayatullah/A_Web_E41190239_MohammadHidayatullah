@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ManagementUserController;
+use App\Http\Controllers\Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,4 @@ use App\Http\Controllers\ManagementUserController;
 Route::resource('/user', 'App\Http\Controllers\ManagementUserController');
 Route::resource('/create', 'App\Http\Controllers\ManagementUserController');
 Route::resource('/user/1/edit', 'App\Http\Controllers\ManagementUserController');
+Route::resource('/index', 'App\Http\Controllers\ManagementUserController');
