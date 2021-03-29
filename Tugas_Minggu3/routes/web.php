@@ -18,7 +18,7 @@ use App\Http\Controllers\Controller;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::resource('/user', 'App\Http\Controllers\ManagementUserController');
-Route::resource('/create', 'App\Http\Controllers\ManagementUserController');
-Route::resource('/user/1/edit', 'App\Http\Controllers\ManagementUserController');
-Route::resource('/index', 'App\Http\Controllers\ManagementUserController');
+Route::get('/user', 'App\Http\Controllers\ManagementUserController@index');
+// Route::resource('/create', 'App\Http\Controllers\ManagementUserController');
+// Route::resource('/user/1/edit', 'App\Http\Controllers\ManagementUserController');
+// Route::resource('/index', 'App\Http\Controllers\ManagementUserController');
