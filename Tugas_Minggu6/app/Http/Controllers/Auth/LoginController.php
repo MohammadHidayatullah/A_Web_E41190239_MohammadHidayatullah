@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Auth;
 
 class LoginController extends Controller
 {
@@ -49,8 +50,12 @@ class LoginController extends Controller
         ];
 
         if (auth()->attempt($login)) {
-            return redirect()->route('home');
+            return redirect()->route('dashboard');
         }
         return redirect()->route('login')->with(['error' => 'Email/Password salah!']);
+    }
+    public function logout(request $request){
+        Auth::logout();
+        return redirect()->route('login');
     }
 }
